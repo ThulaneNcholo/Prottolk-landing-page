@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prottolk is a total turnkey solution supplier aimed at improving the efficiency and safety of industrial plants through plant automation."
+    />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- font family Roboto  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootsrap icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <style>
+      :root {
+        --primary-color: #ed1c24;
+        --secondary-color: #808285;
+        --sub-color: #000000;
+        --sub-titles: #cacaca;
+        --background-color: #e4eaff;
+        --secondary-background: #f7f9fa;
+      }
+
+      body::before {
+        display: block;
+        content: "";
+        height: 60px;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      .carasoul_titles {
+        font-family: "Barlow", sans-serif;
+      }
+
+      /* navbar style  */
+      .nav_logo {
+        width: 80px;
+      }
+
+      .nav_socials {
+        font-size: 20px;
+      }
+
+      /* hero image  */
+      .hero_image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/image1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 70vh;
+        width: 100%;
+      }
+
+      .cover_image {
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* about company  */
+      .sub_titles {
+        color: grey;
+        font-size: 20px;
+      }
+
+      .titles {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      .works_icons {
+        color: var(--primary-color);
+        margin-right: 15px;
+      }
+
+      .team_image {
+        height: 400px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .titles_span {
+        color: var(--primary-color);
+      }
+
+      /* Services start  */
+      .card_container {
+        border-radius: 12px;
+        height: 500px;
+        max-height: 500px;
+      }
+
+      .service_image {
+        /* border: 12px solid #fff;  */
+        vertical-align: middle;
+        width: 100%;
+        height: 183px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .service_title {
+        font-size: 22px;
+        line-height: 32px;
+        /* border-bottom: 2px solid var(--primary-color);  */
+      }
+
+      .service_title_border {
+        height: 2px;
+        width: 10%;
+        background-color: var(--primary-color);
+      }
+
+      .text_deco {
+        color: var(--primary-color);
+      }
+
+      .serviceBanner {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/serviceBanner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      /* carousel style  */
+      .carousel-item {
+        height: 70vh;
+      }
+
+      .carousel_content {
+        margin-top: 80px;
+      }
+
+      .carousel_btn {
+        border-radius: 12px;
+      }
+
+      .carousel_btn_more {
+        border-radius: 12px;
+        color: white;
+        background-color: var(--primary-color);
+      }
+
+      .carousel_btn_contact {
+        border-radius: 12px;
+        color: var(--primary-color);
+      }
+
+      .hero_title {
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 700;
+      }
+
+      .carousel_item_1 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel_item_2 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/hero2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel_item_3 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* Banners  */
+      .bannerBackground {
+        background-color: var(--secondary-background);
+      }
+
+      /* form styling  */
+      .form_container {
+        border-radius: 12px;
+      }
+
+      /* Footer  */
+      .footer_logo {
+        width: 100px;
+      }
+
+      @media screen and (max-width: 576px) {
+        .carousel-item {
+          height: 50vh !important;
+        }
+
+        .hero_title {
+          font-size: 30px;
+          line-height: 35px;
+          font-weight: 700;
+        }
+
+        .carousel_sub {
+          font-size: 15px;
+        }
+
+        .titles {
+          font-size: 28px;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          display: none;
+        }
+      }
+    </style>
+
+    <title>PROTTOLK</title>
+  </head>
+  <body>
+    <!-- ======= Navbar  ======= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-md-3"
+    >
+      <div class="container-fluid">
+        <a href="index.html" aria-label="prottlok logo">
+          <img src="/images/p-logo-dark.png" alt="" class="nav_logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gallary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======= hero Container  ======= -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active carousel_item_1">
+          <div class="container">
+            <div class="row mx-0">
+              <div class="col-12 col-md-6 carousel_content">
+                <h5 class="text-light hero_title">
+                  Innovation. Efficiency. Automation
+                </h5>
+                <p class="text-light carousel_sub">
+                  Streamline operations, enhance productivity. Prottolk's
+                  automation expertise drives industrial efficiency and
+                  excellence.
+                </p>
+                <div class="d-flex mt-5">
+                  <button
+                    class="btn carousel_btn_more px-md-3 py-md-2"
+                    style="margin-right: 20px"
+                  >
+                    Read More
+                  </button>
+                  <button
+                    class="btn btn-light carousel_btn_contact px-md-3 py-md-2"
+                  >
+                    Contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel_item_2">
+          <div class="container">
+            <div class="row mx-0">
+              <div class="col-12 col-md-6 carousel_content">
+                <h5 class="text-light hero_title">
+                  Solar Power. Sustainable Solutions.
+                </h5>
+                <p class="text-light carousel_sub">
+                  Description: "Unleash renewable power. Prottolk's solar
+                  solutions shape a sustainable future."
+                </p>
+                <div class="d-flex mt-5">
+                  <button
+                    class="btn carousel_btn_more px-md-3 py-md-2"
+                    style="margin-right: 20px"
+                  >
+                    Read More
+                  </button>
+                  <button
+                    class="btn btn-light carousel_btn_contact px-md-3 py-md-2"
+                  >
+                    Contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item carousel_item_3">
+          <div class="container">
+            <div class="row mx-0">
+              <div class="col-12 col-md-6 carousel_content">
+                <h5 class="text-light hero_title">
+                  Electrical Excellence. Seamless Operations.
+                </h5>
+                <p class="text-light carousel_sub">
+                  Power your success. Prottolk's electrical expertise ensures
+                  reliability, safety, and smooth operations.
+                </p>
+                <div class="d-flex mt-5">
+                  <button
+                    class="btn carousel_btn_more px-md-3 py-md-2"
+                    style="margin-right: 20px"
+                  >
+                    Read More
+                  </button>
+                  <button
+                    class="btn btn-light carousel_btn_contact px-md-3 py-md-2"
+                  >
+                    Contact us
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- ======= About us  ======= -->
+    <div class="bannerBackground">
+      <div class="container mt-5 py-5">
+        <h6 class="sub_titles">ABOUT OUR COMPANY</h6>
+        <h3 class="titles my-3">
+          <span class="text_deco">Prottolk</span> : Empowering Industrial
+          Efficiency and Safety through Turnkey Automation Solutions.
+        </h3>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <p>
+              Prottolk is a total turnkey solution supplier aimed at improving
+              the efficiency and safety of industrial plants through plant
+              automation. The company is able to supply, install, and commission
+              projects.
+            </p>
+            <p>
+              The company offers after sales support for new and existing
+              automation installations, through preventative maintenance,
+              specialized customer training and technical support for Variable
+              Speed Drives (VSD’s), Programmable Logic Circuits (PLC’s), Solar
+              Inverters and Low Voltage (LV) and Medium Voltage (MV)
+              Switchgears.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 mb-3">
+            <p>
+              Using valuable experience gained in Service engineering, Sales,
+              and Product Management, Prottolk can provide technical and
+              commercial solution-based assistance in the Mining, Power
+              Generation, Solar Energy, FMCG, and Water Industries.
+            </p>
+            <div class="d-flex">
+              <i class="bi bi-person-circle works_icons"></i>
+              <p>Permanent Staff: 9 (7 Technicians)</p>
+            </div>
+            <div class="d-flex">
+              <i class="bi bi-person-circle works_icons"></i>
+              <p>Temporary Staff 12 (7 Electricians & 5 Artisans)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Our Team  ======= -->
+    <div class="container mt-5">
+      <h6 class="sub_titles">OUR TEAM</h6>
+      <div class="row">
+        <div class="col-12 col-md-6 mb-5">
+          <h3 class="titles">
+            Enhancing Industrial Operations: Prottolk's Comprehensive Automation
+            Solutions for
+            <span class="titles_span">Efficiency and Safety</span>.
+          </h3>
+          <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
+            Read More
+          </button>
+        </div>
+        <div class="col-12 col-md-6 mb-5">
+          <img src="/images/team.jpeg" alt="Prottolk" class="team_image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Services  ======= -->
+    <div class="serviceBanner">
+      <div class="container mt-5 py-5">
+        <div class="text-center my-5">
+          <h6 class="sub_titles text-white">OUR SERVICES</h6>
+          <h3 class="titles my-3 text-white">
+            High Performance Services
+            <span class="text_deco">For Multiple Industries</span>
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 col-md-3 mb-5">
+            <div>
+              <div class="card_container bg-light shadow p-3">
+                <img
+                  src="/images/image1.jpg"
+                  alt="Prottolk"
+                  class="service_image"
+                />
+                <h4 class="service_title mb-0">Variable Speed Drives (VSD)</h4>
+                <div class="service_title_border mb-3"></div>
+                <p class="text-secondary">
+                  Boost your industrial processes with Prottolk's advanced
+                  Variable Speed Drives (VSD) solutions. Experience precise
+                  control over motor speed, improved energy efficiency, and
+                  enhanced productivity.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card item  -->
+          <div class="col-12 col-md-4 col-md-3 mb-5">
+            <div>
+              <div class="card_container bg-light shadow p-3">
+                <img
+                  src="/images/image2.jpg"
+                  alt="Prottolk"
+                  class="service_image"
+                />
+                <h4 class="service_title mb-0">
+                  Industrial & Commercial Solar Energy Solutions
+                </h4>
+                <div class="service_title_border mb-3"></div>
+                <p class="text-secondary">
+                  Harness the power of the sun with Prottolk's comprehensive
+                  industrial and commercial solar energy solutions. Maximize
+                  your energy savings, reduce environmental impact, and unlock
+                  the potential of sustainable power generation.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end service item  -->
+          <div class="col-12 col-md-4 col-md-3 mb-5">
+            <div>
+              <div class="card_container bg-light shadow p-3">
+                <img
+                  src="/images/image3.jpg"
+                  alt="Prottolk"
+                  class="service_image"
+                />
+                <h4 class="service_title">PLC, SCADA, DCS Systems</h4>
+                <div class="service_title_border mb-3"></div>
+                <p class="text-secondary">
+                  Take automation to the next level with Prottolk's PLC, SCADA,
+                  and DCS systems. Seamlessly monitor, control, and optimize
+                  your industrial operations, ensuring efficiency, reliability,
+                  and seamless integration.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end service item  -->
+        </div>
+        <center>
+          <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
+            Show more
+          </button>
+        </center>
+      </div>
+    </div>
+
+    <!-- ======= Supply  ======= -->
+    <div class="container mt-5">
+      <center>
+        <h3 class="titles my-3">Automation & System Intergration</h3>
+        <p class="text-secondary">
+          Delivering Equipment and Value-Added Services: Prottolk's Solutions
+          for Industrial Excellence
+        </p>
+      </center>
+
+      <div class="mt-5">
+        <div class="row">
+          <div class="col-12 col-md-6 col-6 mb-5">
+            <h4 class="sub_titles text-danger fw-bold mb-3">
+              Variable Speed Drive
+            </h4>
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Application Design and Sizing</p>
+            </div>
+            <!-- end list item  -->
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Preventative and Predictive Maintenance</p>
+            </div>
+            <!-- end list item  -->
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>After Sales Support</p>
+            </div>
+            <!-- end list item  -->
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Crane Drives Specialists</p>
+            </div>
+            <!-- end list item  -->
+          </div>
+
+          <div class="col-12 col-md-6 col-6 mb-5">
+            <h4 class="sub_titles text-danger fw-bold mb-3">Solar Inverters</h4>
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Preventative and Predictive Maintenance</p>
+            </div>
+            <!-- end list item  -->
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Installation of Solar Panels</p>
+            </div>
+            <!-- end list item  -->
+            <div class="d-flex">
+              <i
+                class="bi bi-check-circle-fill text-danger"
+                style="margin-right: 20px"
+              ></i>
+              <p>Installation & Commissioning of Solar Inverter</p>
+            </div>
+            <!-- end list item  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Contact Us ======= -->
+    <div class="bannerBackground">
+      <div class="container mt-5 py-5">
+        <div class="text-center my-5">
+          <h6 class="sub_titles">CONTACT US</h6>
+          <h3 class="titles my-3">
+            Get In Touch <span class="text_deco">With Us</span>
+          </h3>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 mb-4">
+            <div class="row mb-4">
+              <div class="col-2 d-flex align-items-center">
+                <i
+                  class="bi bi-house bg-danger p-3 text-white"
+                  style="border-radius: 12px"
+                ></i>
+              </div>
+              <div class="col d-flex align-items-center">
+                <p class="mb-0">917 Morkels Cl, Halfway House, Midrand, 1685</p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row mb-4">
+              <div class="col-2">
+                <i
+                  class="bi bi-telephone bg-danger p-3 text-white"
+                  style="border-radius: 12px"
+                ></i>
+              </div>
+              <div class="col d-flex align-items-center">
+                <p class="mb-0">+27 11 024 6820</p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row mb-4">
+              <div class="col-2 d-flex align-items-center">
+                <i
+                  class="bi bi-telephone bg-danger p-3 text-white"
+                  style="border-radius: 12px"
+                ></i>
+              </div>
+              <div class="col d-flex align-items-center">
+                <p class="mb-0">+27 86 569 8906</p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row mb-4">
+              <div class="col-2 d-flex align-items-center">
+                <i
+                  class="bi bi-envelope bg-danger p-3 text-white"
+                  style="border-radius: 12px"
+                ></i>
+              </div>
+              <div class="col d-flex align-items-center">
+                <p class="mb-0">Sales@prottlok.com</p>
+              </div>
+            </div>
+            <!-- end item  -->
+          </div>
+
+          <div class="col">
+            <div class="bg-dark p-4 form_container">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Your Name"
+                />
+                <label for="floatingInput">Your Name</label>
+              </div>
+              <!-- end input item  -->
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Your Email"
+                />
+                <label for="floatingInput">Your Email</label>
+              </div>
+              <!-- end input item  -->
+              <div class="form-floating mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Your Number"
+                />
+                <label for="floatingInput">Your Number</label>
+              </div>
+              <!-- end input item  -->
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                ></textarea>
+                <label for="floatingTextarea2">Message</label>
+              </div>
+              <!-- end input item  -->
+              <center>
+                <button class="btn btn-light my-3">Send Message</button>
+              </center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer class="py-3 bg-black">
+      <center>
+        <img src="/images/p-logo.png" alt="" class="footer_logo mt-3" />
+      </center>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Gallary</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Contact</a>
+        </li>
+      </ul>
+      <p class="text-center text-white">
+        © 2023 <span class="text_deco">Prottolk</span> Investments (Pty) Ltd
+      </p>
+      <ul class="nav justify-content-center list-unstyled d-flex pb-5">
+        <li class="ms-3">
+          <i class="bi bi-twitter text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-instagram text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-facebook text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-linkedin text-white nav_socials"></i>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
