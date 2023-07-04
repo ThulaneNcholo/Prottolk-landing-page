@@ -35,6 +35,17 @@
 
     <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico" />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- Aos Animation  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <style>
       :root {
         --primary-color: #ed1c24;
@@ -59,13 +70,35 @@
         font-family: "Barlow", sans-serif;
       }
 
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
       /* navbar style  */
       .nav_logo {
-        width: 80px;
+        width: 170px;
       }
 
       .nav_socials {
         font-size: 20px;
+      }
+
+      .offcanvas_icons {
+        background-color: var(--primary-color);
+        border-radius: 12px;
+        font-size: 22px;
+        color: white;
+        margin-right: 15px;
+      }
+
+      .menu_icon {
+        font-size: 25px !important;
+        color: white;
+      }
+
+      .btn_menu {
+        background-color: var(--primary-color);
       }
 
       /* hero image  */
@@ -118,11 +151,6 @@
       }
 
       /* Services start  */
-      .card_container {
-        border-radius: 12px;
-        height: 500px;
-        max-height: 500px;
-      }
 
       .service_image {
         vertical-align: middle;
@@ -234,6 +262,10 @@
       }
 
       @media screen and (max-width: 576px) {
+        .nav_logo {
+          width: 120px;
+        }
+
         .carousel-item {
           height: 50vh !important;
         }
@@ -257,6 +289,37 @@
           display: none;
         }
       }
+
+      /* Service Scroll  */
+      .card-title,
+      .card-text {
+        overflow-wrap: break-word;
+      }
+
+      /* Swiper Css  */
+      .swiper {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 400px;
+        margin: 0 2em;
+        border-radius: 12px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+
+      .swiper-pagination-bullet {
+        background: var(--swiper-pagination-bullet-inactive-color, white);
+      }
     </style>
 
     <title>PROTTOLK</title>
@@ -265,22 +328,106 @@
     <!-- ======= Navbar  ======= -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-md-3 shadow"
+      style="z-index: 999"
     >
       <div class="container-fluid">
         <a href="index.html" aria-label="prottlok logo">
-          <img src="images/p-logo-dark -lg.png" alt="" class="nav_logo" />
+          <img src="images/logos_lg.png" alt="" class="nav_logo" />
         </a>
         <button
-          class="navbar-toggler"
+          class="btn btn_menu navbar-toggler py-2"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list menu_icon"></i>
         </button>
+
+        <!-- offcanvas component  -->
+        <div
+          class="offcanvas offcanvas-start d-sm-block d-lg-none"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Prottolk</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="/index.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-house offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Home</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/about.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-buildings offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">About Us</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/services.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-gear offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Services</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/gallary.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-image offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Gallary</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/contact.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-person-lines-fill offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Contact</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+
+            <center>
+              <img
+                src="images/prottolk.png"
+                alt=""
+                class="mt-5"
+                style="width: 40%"
+              />
+            </center>
+          </div>
+        </div>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -289,19 +436,16 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="/services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gallary</a>
+              <a class="nav-link" href="/gallary.html">Gallary</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/contact.html">Contact</a>
             </li>
           </ul>
           <div class="d-flex">
@@ -429,20 +573,20 @@
     <!-- ======= About us  ======= -->
     <div class="bannerBackground">
       <div class="container mt-5 py-5">
-        <h6 class="sub_titles">ABOUT OUR COMPANY</h6>
+        <h6 class="sub_titles" data-aos="fade-up">ABOUT OUR COMPANY</h6>
         <h3 class="titles my-3">
-          <span class="text_deco">Prottolk</span> : Empowering Industrial
-          Efficiency and Safety through Turnkey Automation Solutions.
+          <span class="text_deco">Prottolk</span> : Enhancing Industrial
+          Efficiency and Safety with Automation Solutions.
         </h3>
         <div class="row">
           <div class="col-12 col-md-6 mb-3">
-            <p>
+            <p class="d-none d-md-block">
               Prottolk is a total turnkey solution supplier aimed at improving
               the efficiency and safety of industrial plants through plant
               automation. The company is able to supply, install, and commission
               projects.
             </p>
-            <p>
+            <p class="d-none d-md-block">
               The company offers after sales support for new and existing
               automation installations, through preventative maintenance,
               specialized customer training and technical support for Variable
@@ -450,9 +594,19 @@
               Inverters and Low Voltage (LV) and Medium Voltage (MV)
               Switchgears.
             </p>
+
+            <!-- small screen about  -->
+            <p class="d-sm-block d-md-none">
+              Prottolk offers complete industrial plant automation solutions to
+              improve efficiency and safety. We handle supply, installation,
+              commissioning, and provide after-sales support for VSDs, PLCs,
+              Solar Inverters, and LV/MV Switchgears. Our expertise spans
+              multiple industries including Mining, Power Generation, Solar
+              Energy, FMCG, and Water.
+            </p>
           </div>
           <div class="col-12 col-md-6 mb-3">
-            <p>
+            <p class="d-none d-md-block">
               Using valuable experience gained in Service engineering, Sales,
               and Product Management, Prottolk can provide technical and
               commercial solution-based assistance in the Mining, Power
@@ -466,6 +620,15 @@
               <i class="bi bi-person-circle works_icons"></i>
               <p>Temporary Staff 12 (7 Electricians & 5 Artisans)</p>
             </div>
+
+            <!-- small screen about btn  -->
+            <a href="/about.html" class="d-sm-block d-md-none">
+              <button
+                class="btn carousel_btn carousel_btn_more px-md-3 py-md-2 mt-3"
+              >
+                Read More About us
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -475,17 +638,22 @@
     <div class="container mt-5">
       <h6 class="sub_titles">OUR TEAM</h6>
       <div class="row">
-        <div class="col-12 col-md-6 mb-5">
+        <div
+          class="col-12 col-md-6 mb-3"
+          data-aos="fade-right"
+          style="overflow: hidden"
+        >
           <h3 class="titles">
-            Enhancing Industrial Operations: Prottolk's Comprehensive Automation
-            Solutions for
-            <span class="titles_span">Efficiency and Safety</span>.
+            Our Proactive Team Redefining
+            <span class="titles_span">Industrial Automation.</span>
           </h3>
-          <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
-            Read More
-          </button>
+          <a href="/about.html" class="d-none d-md-block">
+            <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
+              Read More
+            </button>
+          </a>
         </div>
-        <div class="col-12 col-md-6 mb-5">
+        <div class="col-12 col-md-6 mb-5" data-aos="fade-left">
           <img
             src="images/team.jpeg"
             alt="Prottolk"
@@ -496,89 +664,132 @@
       </div>
     </div>
 
-    <!-- ======= Services  ======= -->
-    <div class="serviceBanner">
-      <div class="container mt-5 py-5">
-        <div class="text-center my-5">
-          <h6 class="sub_titles text-white">OUR SERVICES</h6>
-          <h3 class="titles my-3 text-white">
-            High Performance Services
-            <span class="text_deco">For Multiple Industries</span>
-          </h3>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-4 col-md-3 mb-5">
-            <div>
-              <div class="card_container bg-light shadow p-3">
-                <img
-                  src="images/image1.jpg"
-                  alt="Prottolk"
-                  class="service_image"
-                  loading="lazy"
-                />
-                <h4 class="service_title mb-0">Variable Speed Drives (VSD)</h4>
-                <div class="service_title_border mb-3"></div>
-                <p class="text-secondary">
-                  Boost your industrial processes with Prottolk's advanced
-                  Variable Speed Drives (VSD) solutions. Experience precise
-                  control over motor speed, improved energy efficiency, and
-                  enhanced productivity.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- end card item  -->
-          <div class="col-12 col-md-4 col-md-3 mb-5">
-            <div>
-              <div class="card_container bg-light shadow p-3">
-                <img
-                  src="images/image2.jpg"
-                  alt="Prottolk"
-                  class="service_image"
-                  loading="lazy"
-                />
-                <h4 class="service_title mb-0">
-                  Industrial & Commercial Solar Energy Solutions
-                </h4>
-                <div class="service_title_border mb-3"></div>
-                <p class="text-secondary">
-                  Harness the power of the sun with Prottolk's comprehensive
-                  industrial and commercial solar energy solutions. Maximize
-                  your energy savings, reduce environmental impact, and unlock
-                  the potential of sustainable power generation.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- end service item  -->
-          <div class="col-12 col-md-4 col-md-3 mb-5">
-            <div>
-              <div class="card_container bg-light shadow p-3">
-                <img
-                  src="images/image3.jpg"
-                  alt="Prottolk"
-                  class="service_image"
-                  loading="lazy"
-                />
-                <h4 class="service_title">PLC, SCADA, DCS Systems</h4>
-                <div class="service_title_border mb-3"></div>
-                <p class="text-secondary">
-                  Take automation to the next level with Prottolk's PLC, SCADA,
-                  and DCS systems. Seamlessly monitor, control, and optimize
-                  your industrial operations, ensuring efficiency, reliability,
-                  and seamless integration.
-                </p>
-              </div>
-            </div>
-          </div>
-          <!-- end service item  -->
-        </div>
-        <center>
-          <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
-            Show more
-          </button>
-        </center>
+    <!-- ======= Swiper Services  ======= -->
+    <div class="serviceBanner my-5 py-5">
+      <div class="text-center">
+        <h6 class="sub_titles text-white">OUR SERVICES</h6>
+        <h3 class="titles my-3 text-white">
+          High Performance Services
+          <span class="text_deco">For Multiple Industries</span>
+        </h3>
       </div>
+      <div class="swiper mySwiper" data-aos="zoom-in" style="overflow: hidden;">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/group4/group4.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">VSD: Variable</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              Prottolk's VSD solutions offer precise motor speed control, energy
+              efficiency, and enhanced productivity for industrial processes.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/solarPLk.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">Solar Solutions</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              Prottolk offers solar energy solutions for industries and
+              commercial settings to maximize energy savings and reduce
+              environmental impact.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/group5/group5.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">PLC Systems</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              PLC, SCADA, and DCS systems provide advanced automation, ensuring
+              efficiency, reliability, and seamless integration in industrial
+              operations.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/group5/group5-4.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">Switchgears</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              Ensure safe power distribution with Prottolk's cutting-edge LV and
+              MV switchgears, safeguarding electrical systems for uninterrupted
+              operations.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/group4/group4-4.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">Panel Wiring</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              Streamline your electrical infrastructure with Prottolk's panel
+              building and wiring expertise for optimal performance and
+              reliability.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/installation.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">Electrical Installations</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              Trust Prottolk for professional electrical installation services
+              in industrial and commercial settings, ensuring compliance,
+              safety, and efficiency.
+            </p>
+          </div>
+          <div class="swiper-slide bg-white p-3">
+            <img
+              src="images/group2/group2-4.jpg"
+              class="card-img-top service_image"
+              loading="lazy"
+              alt="Prottolk"
+            />
+            <h5 class="service_title">CoC Issuing</h5>
+            <div class="service_title_border mb-3"></div>
+            <p class="card-text text-secondary">
+              With Prottolk's Certificate of Compliance (CoC) services,
+              electrical installations adhere to industry standards, ensuring
+              safety and reliability.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- see all button  -->
+      <center>
+        <a href="/services.html">
+          <button class="btn carousel_btn carousel_btn_more py-md-2 px-5">
+            Show all Services
+          </button>
+        </a>
+      </center>
     </div>
 
     <!-- ======= Supply  ======= -->
@@ -593,7 +804,7 @@
 
       <div class="mt-5">
         <div class="row">
-          <div class="col-12 col-md-6 col-6 mb-5">
+          <div class="col-12 col-md-6 col-6 mb-5" data-aos="fade-up-right" style="overflow: hidden;">
             <h4 class="sub_titles text-danger fw-bold mb-3">
               Variable Speed Drive
             </h4>
@@ -631,7 +842,7 @@
             <!-- end list item  -->
           </div>
 
-          <div class="col-12 col-md-6 col-6 mb-5">
+          <div class="col-12 col-md-6 col-6 mb-5" data-aos="fade-up-left" style="overflow: hidden;">
             <h4 class="sub_titles text-danger fw-bold mb-3">Solar Inverters</h4>
             <div class="d-flex">
               <i
@@ -821,5 +1032,39 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        initialSlide: 3,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      swiper.on("click", function () {
+        swiper.slideTo(swiper.clickedIndex); // Go to the clicked slide
+      });
+    </script>
+
+    <script>
+      AOS.init({
+        duration: 650,
+        once: true,
+      });
+    </script>
   </body>
 </html>

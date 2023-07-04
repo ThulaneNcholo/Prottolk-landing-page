@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Prottolk is a total turnkey solution supplier aimed at improving the efficiency and safety of industrial plants through plant automation."
+    />
+
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- font family Roboto  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootsrap icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico" />
+
+    <style>
+      :root {
+        --primary-color: #ed1c24;
+        --secondary-color: #808285;
+        --sub-color: #000000;
+        --sub-titles: #cacaca;
+        --background-color: #e4eaff;
+        --secondary-background: #f7f9fa;
+      }
+
+      body::before {
+        display: block;
+        content: "";
+        height: 60px;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .carasoul_titles {
+        font-family: "Barlow", sans-serif;
+      }
+
+      /* navbar style  */
+      .nav_logo {
+        width: 170px;
+      }
+
+      .nav_socials {
+        font-size: 20px;
+      }
+
+      .offcanvas_icons {
+        background-color: var(--primary-color);
+        border-radius: 12px;
+        font-size: 22px;
+        color: white;
+        margin-right: 15px;
+      }
+
+      .menu_icon {
+        font-size: 25px !important;
+        color: white;
+      }
+
+      .btn_menu {
+        background-color: var(--primary-color);
+      }
+
+      /* hero image  */
+      .hero_image {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/image1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 70vh;
+        width: 100%;
+      }
+
+      .cover_image {
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      /* about company  */
+      .sub_titles {
+        color: grey;
+        font-size: 20px;
+      }
+
+      .titles {
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      .works_icons {
+        color: var(--primary-color);
+        margin-right: 15px;
+      }
+
+      .team_image {
+        height: 400px;
+        width: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .titles_span {
+        color: var(--primary-color);
+      }
+
+      /* Services start  */
+      .card_container {
+        border-radius: 12px;
+        height: 500px;
+        max-height: 500px;
+      }
+
+      .service_image {
+        vertical-align: middle;
+        width: 100%;
+        height: 183px;
+        border-radius: 12px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      .service_title {
+        font-size: 22px;
+        line-height: 32px;
+      }
+
+      .service_title_border {
+        height: 2px;
+        width: 10%;
+        background-color: var(--primary-color);
+      }
+
+      .text_deco {
+        color: var(--primary-color);
+      }
+
+      .serviceBanner {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/serviceBanner.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .aboutBanner {
+        background-color: var(--secondary-background);
+      }
+
+      /* carousel style  */
+      .carousel-item {
+        height: 70vh;
+      }
+
+      .carousel_content {
+        margin-top: 80px;
+      }
+
+      .carousel_btn {
+        border-radius: 12px;
+      }
+
+      .carousel_btn_more {
+        border-radius: 12px;
+        color: white;
+        background-color: var(--primary-color);
+      }
+
+      .carousel_btn_contact {
+        border-radius: 12px;
+        color: var(--primary-color);
+      }
+
+      .hero_title {
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 700;
+      }
+
+      .carousel_item_1 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/hero.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel_item_2 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/hero2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .carousel_item_3 {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/hero3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      /* Banners  */
+      .bannerBackground {
+        background-color: var(--secondary-background);
+      }
+
+      /* form styling  */
+      .form_container {
+        border-radius: 12px;
+      }
+
+      /* Footer  */
+      .footer_logo {
+        width: 100px;
+      }
+
+      /* About Us style  */
+      .component_1 {
+        height: 500px;
+        width: 100%;
+        background-image: url("images/team4.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .component_2 {
+        height: 500px;
+        width: 100%;
+        background-image: url("images/team_component.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .logo_images {
+        height: 100px;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .about_workers {
+        width: 100%;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("/images/solar_svg.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .about_banner_img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .team_member {
+        background: linear-gradient(#fb3038, #db7074);
+        border-radius: 12px;
+      }
+
+      /* Mission and Values  */
+      .values_container {
+        background: linear-gradient(#fb3038, #db7074);
+        border-radius: 12px;
+      }
+
+      .div-with-line {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        position: relative;
+      }
+
+      .div-with-line::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translateX(50%);
+        width: 1px;
+        height: 100%;
+        background-color: black;
+      }
+
+      .registration_icons {
+        font-size: 30px;
+        color: var(--primary-color);
+      }
+
+      .registration_card {
+        border-radius: 12px;
+        height: 170px;
+      }
+
+      @media screen and (max-width: 576px) {
+        .nav_logo {
+          width: 120px;
+        }
+
+        .carousel-item {
+          height: 50vh !important;
+        }
+
+        .hero_title {
+          font-size: 30px;
+          line-height: 35px;
+          font-weight: 700;
+        }
+
+        .carousel_sub {
+          font-size: 15px;
+        }
+
+        .titles {
+          font-size: 28px;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+          display: none;
+        }
+      }
+
+      .register_icons_container {
+        /* background-color: var(--primary-color);  */
+        background: linear-gradient(#fb3038, #db7074);
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        /* margin: auto; */
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+      }
+
+      .register_icon {
+        font-size: 25px;
+        color: white;
+      }
+
+      .register_titles {
+        font-size: 18px;
+        margin-bottom: 0px;
+        display: inline-block;
+      }
+
+      .deco_image {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      .banner_seciton_one {
+        background-color: var(--primary-color);
+      }
+
+      .team_about_img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      /* staff style  */
+      .staff_icons {
+        color: var(--primary-color) !important;
+        font-size: 30px;
+      }
+
+      .staff_title {
+        font-size: 20px;
+      }
+
+      .secondary_subs {
+        font-size: 14px;
+      }
+    </style>
+
+    <title>PROTTOLK</title>
+  </head>
+  <body>
+    <!-- ======= Navbar  ======= -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-md-3 shadow"
+    >
+      <div class="container-fluid">
+        <a href="index.html" aria-label="prottlok logo">
+          <img src="images/logos_lg.png" alt="" class="nav_logo" />
+        </a>
+        <button
+          class="btn btn_menu navbar-toggler py-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list menu_icon"></i>
+        </button>
+
+        <!-- offcanvas component  -->
+        <div
+          class="offcanvas offcanvas-start d-sm-block d-lg-none"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Prottolk</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <a href="/index.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-house offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Home</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/about.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-buildings offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">About Us</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/services.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-gear offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Services</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/gallary.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-image offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Gallary</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+            <a href="/contact.html">
+              <div class="row mb-4">
+                <div class="col-2">
+                  <i class="bi bi-person-lines-fill offcanvas_icons p-2"></i>
+                </div>
+                <div class="col d-flex align-items-center">
+                  <p class="mb-0">Contact</p>
+                </div>
+              </div>
+            </a>
+            <!-- end item  -->
+
+            <center>
+              <img
+                src="images/prottolk.png"
+                alt=""
+                class="mt-5"
+                style="width: 40%"
+              />
+            </center>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gallary.html">Gallary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn carousel_btn carousel_btn_more px-md-3 py-md-2">
+              Contact
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ======= Header Image  ======= -->
+    <div class="container mt-5 d-none d-lg-block">
+      <div class="d-flex p-3">
+        <div class="component_1"></div>
+        <div class="component_2 p-5">
+          <div class="d-flex justify-content-end">
+            <h3 class="titles my-3 text-white">
+              Prottolk Investments (Pty) Ltd
+            </h3>
+          </div>
+          <div class="d-flex justify-content-end">
+            <p class="text-light" style="width: 80%">
+              Prottolk is a total turnkey solution supplier aimed at improving
+              the efficiency and safety of industrial plants through plant
+              automation.
+            </p>
+          </div>
+          <div class="d-flex justify-content-end">
+            <button class="btn btn-light shadow">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5 d-sm-block d-lg-none">
+      <img src="/images/team.jpeg" alt="" class="team_about_img" />
+    </div>
+
+    <!-- ======= About Comonay  ======= -->
+    <div class="container my-5">
+      <h6 class="sub_titles">ABOUT OUR COMPANY</h6>
+      <h3 class="titles my-3">
+        <span class="text_deco">Prottolk</span> : Empowering Industrial
+        Efficiency and Safety through Turnkey Automation Solutions.
+      </h3>
+
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <p>
+            Prottolk is a total turnkey solution supplier aimed at improving the
+            efficiency and safety of industrial plants through plant automation.
+            The company is able to supply, install, and commission projects.
+          </p>
+          <p>
+            The company offers after sales support for new and existing
+            automation installations, through preventative maintenance,
+            specialized customer training and technical support for Variable
+            Speed Drives (VSD’s), Programmable Logic Circuits (PLC’s), Solar
+            Inverters and Low Voltage (LV) and Medium Voltage (MV) Switchgears.
+          </p>
+          <p>
+            Using valuable experience gained in Service engineering, Sales, and
+            Product Management, Prottolk can provide technical and commercial
+            solution-based assistance in the Mining, Power Generation, Solar
+            Energy, FMCG, and Water Industries.
+          </p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="row">
+            <div class="col p-3">
+              <img src="/images/prottolk.png" alt="" class="logo_images" />
+            </div>
+            <div class="col p-3">
+              <img src="/images/abb-logo.jpg" alt="" class="logo_images" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Business Registrations  ======= -->
+    <div class="container my-5">
+      <div class="text-center">
+        <h3 class="titles mb-5">
+          Company Registrations
+          <span class="text_deco">& Certificates</span>
+        </h3>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-3 col-md-5">
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-paperclip register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">Prottolk Investments (Pty) Ltd</h4>
+              <p class="text-secondary secondary_subs mb-0">Registered Name</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-paperclip register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">2014/062910/07</h4>
+              <p class="text-secondary secondary_subs mb-0">
+                Registered Number
+              </p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-card-checklist register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">9583188173</h4>
+              <p class="text-secondary secondary_subs mb-0">SARS Tax Number</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-bootstrap register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">BBBEE: Level 1</h4>
+              <p class="text-secondary secondary_subs mb-0">BBBEE</p>
+            </div>
+          </div>
+          <!-- end item  -->
+        </div>
+        <div class="col-12 mb-3 col-md-2">
+          <img
+            src="/images/patternpad.svg"
+            alt=""
+            style="height: 100%; width: 100%; border-radius: 12px"
+          />
+        </div>
+        <div class="col-12 mb-3 col-md-5">
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-check-circle register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">VAT No: 4260266749</h4>
+              <p class="text-secondary secondary_subs mb-0">VAT No</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-c-square register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">4EP PE</h4>
+              <p class="text-secondary secondary_subs mb-0">CIDB</p>
+            </div>
+          </div>
+          <!-- end item  -->
+          <div
+            class="d-flex p-3 shadow shadow-sm mb-3"
+            style="border-radius: 12px"
+          >
+            <div class="register_icons_container">
+              <i class="bi bi-journal-check register_icon"></i>
+            </div>
+            <div>
+              <h4 class="register_titles">Number: 1006018</h4>
+              <p class="text-secondary secondary_subs mb-0">CIDB CRS Number</p>
+            </div>
+          </div>
+          <!-- end item  -->
+        </div>
+      </div>
+    </div>
+
+    <div class="about_workers my-5 py-5">
+      <div class="text-center">
+        <h3 class="titles mb-3 text-white">
+          Prottolk
+          <span class="text_deco">Staff</span>
+        </h3>
+      </div>
+
+      <center>
+        <i class="bi bi-person-circle staff_icons text-white mb-4"></i>
+        <p class="text-white staff_title mb-3">
+          Permanent Staff : <span class="fw-bold">9 ( 7 Technicians )</span>
+        </p>
+      </center>
+
+      <center>
+        <i class="bi bi-person-circle staff_icons text-white mb-4"></i>
+        <p class="text-white staff_title mb-3">
+          Temporary Staff :
+          <span class="fw-bold">12 ( 7 Electricians & 5 Artisans )</span>
+        </p>
+      </center>
+    </div>
+
+    <!-- ======= Workers Count  ======= -->
+    <!-- <div class="container mt-5">
+      <div
+        style="
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <img src="images/group2/group2.jpg" alt="" class="about_banner_img" />
+        <div
+          class="team_member shadow"
+          style="position: absolute; bottom: -3rem; right: 3rem; left: 3rem"
+        >
+          <div class="container px-3 py-5">
+            <div class="row">
+              <div class="col-6">
+                <center>
+                  <h3 class="text-light fw-bold">9+</h3>
+                  <h6 class="text-light fw-bold">Permanent Staff</h6>
+                </center>
+              </div>
+              <div class="col-6">
+                <center>
+                  <h3 class="text-light fw-bold">12+</h3>
+                  <h6 class="text-light fw-bold">Temporary Staff</h6>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- ======= Mission and Vision  ======= -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-6 p-3">
+          <h3 class="titles">Our Mission</h3>
+          <p>
+            At Prottolk, our mission is to excel in both domestic and
+            international markets by continuously expanding our capabilities
+            throughout the value chain. From concept to commissioning, we strive
+            to deliver exceptional results in contracts we undertake.
+          </p>
+          <p>
+            We are committed to upholding the highest standards of quality,
+            safety, and environmental responsibility while ensuring
+            cost-effectiveness and timely delivery.
+          </p>
+          <p>
+            By building a team of professionals with diverse expertise in
+            project and construction management, design, engineering, finance,
+            and economics, we are poised to seize opportunities in booming local
+            and international markets.
+          </p>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6">
+          <div class="p-3 values_container">
+            <h3 class="titles text-white">Our Values</h3>
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-check-circle-fill text-white"></i>
+              </div>
+              <div class="col">
+                <p class="text-light">
+                  Commitment to Quality: Striving for excellence by upholding
+                  stringent standards in all aspects of our work.
+                </p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-check-circle-fill text-white"></i>
+              </div>
+              <div class="col">
+                <p class="text-light">
+                  Safety and Environment: Prioritizing the well-being of our
+                  stakeholders and implementing sustainable practices for a
+                  greener future.
+                </p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-check-circle-fill text-white"></i>
+              </div>
+              <div class="col">
+                <p class="text-light">
+                  Cost Economics: Optimizing project costs while maintaining the
+                  highest level of quality, ensuring maximum value for our
+                  clients.
+                </p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-check-circle-fill text-white"></i>
+              </div>
+              <div class="col">
+                <p class="text-light">
+                  Timely Delivery: Honoring our commitments by completing
+                  projects on schedule, enabling our clients to achieve their
+                  goals promptly.
+                </p>
+              </div>
+            </div>
+            <!-- end item  -->
+            <div class="row">
+              <div class="col-1">
+                <i class="bi bi-check-circle-fill text-white"></i>
+              </div>
+              <div class="col">
+                <p class="text-light">
+                  Collaboration and Alliances: Actively seeking and nurturing
+                  partnerships to leverage collective expertise and expand our
+                  capabilities for mutual growth.
+                </p>
+              </div>
+            </div>
+            <!-- end item  -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= Footer ======= -->
+    <footer class="py-3 bg-black mt-5">
+      <center>
+        <img src="images/p-logo.png" alt="" class="footer_logo mt-3" />
+      </center>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Gallary</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2 text-white">Contact</a>
+        </li>
+      </ul>
+      <p class="text-center text-white">
+        © 2023 <span class="text_deco">Prottolk</span> Investments (Pty) Ltd
+      </p>
+      <ul class="nav justify-content-center list-unstyled d-flex pb-5">
+        <li class="ms-3">
+          <i class="bi bi-twitter text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-instagram text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-facebook text-white nav_socials"></i>
+        </li>
+        <li class="ms-3">
+          <i class="bi bi-linkedin text-white nav_socials"></i>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
